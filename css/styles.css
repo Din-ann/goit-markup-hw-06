@@ -31,6 +31,12 @@ button {
   cursor: pointer;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   /* width: 100%;
   max-width: 1158px; */
@@ -162,25 +168,45 @@ button {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office.jpg);
+    url(../images/hero-bg-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 188px 0;
   max-width: 1440px;
   margin: 0 auto;
+}
+
+.hero-container {
+  /* padding: 188px 472px; */
+  padding: 72px 52px;
+}
+
+@media screen and (min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi), 
+(min-resolution: 2ppx) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-bg-mob-2x.jpg);
+  }
 }
 
 .hero-title {
   color: #fff;
   text-align: center;
   font-family: Roboto;
-  font-size: 56px;
-  line-height: 1.07;
+  /* font-size: 56px; */
+  /* line-height: 1.07; */
+  font-size: 36px;
+  line-height: 1.11;
+  margin-bottom: 72px;
   letter-spacing: 0.02em;
   max-width: 496px;
-  margin: 0 auto;
-  padding-bottom: 45px;
+  /* margin: 0 auto; */
+  /* margin-bottom: 48px; */
 }
 
 .hero-button {
@@ -210,8 +236,10 @@ button {
 /*==============Feature===========*/
 
 .feature {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  /* padding-top: 120px;
+  padding-bottom: 120px; */
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .visually-hidden {
@@ -228,13 +256,16 @@ button {
   overflow: hidden;
 }
 
-.reature-list {
+.freature-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  /* gap: 24px; */
+  gap: 72px;
 }
 
 .feature-list-item {
-  width: calc((100% - 72px) / 4);
+  /* width: calc((100% - 72px) / 4); */
+  width: 100%;
 }
 
 .feature-icon {
@@ -370,7 +401,7 @@ button {
 
 .portfolio {
   padding-top: 96px;
-  padding-top: 96px;
+  padding-bottom: 96px;
 }
 .portfolio-title {
   color: var(--NAVY-BLUE, #2e2f42);
@@ -389,7 +420,7 @@ button {
 }
 .portfolio-list-item {
   background: var(--WHITE, #fff);
-  /* width: calc((100% - 48px) / 3); */
+  width: calc((100% - 48px) / 3);
   width: 100%;
 }
 
@@ -518,6 +549,7 @@ button {
 }
 
 .f-form {
+  margin-left: auto;
 }
 
 .footer-form {
@@ -818,14 +850,51 @@ button {
     padding: 0 16px;
   }
 
-  .portfolio-list {
-    column-gap: 24px;
-    row-gap: 72px;
+  .team > .container {
+    width: 584px;
   }
 
-  .portfolio-list-item {
+  .hero {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero-bg-tab.jpg);
+  }
+
+  .hero-container {
+    padding: 112px 136px;
+  }
+
+  @media screen and (min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi), 
+(min-resolution: 2ppx) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-bg-tab-2x.jpg);
+  }
+}
+
+  .hero-title {
+    font-size: 56px;
+  line-height: 1.07;
+  margin-bottom: 36px;
+  }
+
+  .freature-list {
+    row-gap: 72px;
+    column-gap: 24px;
+  }
+  
+  .feature-list-item {
     width: calc((100% - 24px) / 2);
   }
+
 
   .team-list {
     column-gap: 24px;
@@ -836,6 +905,17 @@ button {
   width: calc((100% - 24px) / 2);
 }
 
+.portfolio-list {
+  column-gap: 24px;
+  row-gap: 72px;
+}
+
+.portfolio-list-item {
+  width: calc((100% - 24px) / 2);
+}
+
+
+
 
 }
 
@@ -844,32 +924,82 @@ button {
     width: 1200px;
   }
 
-  .portfolio {
-    padding-bottom: 120px;
+  .team > .container {
+    width: 1200px;
+  }
+
+  .hero {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg);
+  }
+
+  .hero-container {
+    padding: 188px 472px;
+  }
+
+  @media screen and (min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi), 
+(min-resolution: 2ppx) {
+  .hero {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-2x.jpg);
+  }
+}
+
+  .hero-title {
+  margin-bottom: 48px;
+  
+  }
+
+  .feature {
     padding-top: 120px;
-  }
-
-  .portfolio-list {
-    row-gap: 48px;
-  column-gap: 24px;
-  }
-
-  .portfolio-list-item {
-    width: calc((100% - 48px) / 3);
-  }
+      padding-bottom: 120px;
+    }
+    
+    .freature-list {
+      gap: 24px;
+    }
+    
+    .feature-list-item {
+      width: calc((100% - 72px) / 4);
+    }
 
   .team {
     padding-top: 120px;
     padding-bottom: 120px;
+  }
 
   .team-list {
-    column-gap: 24px;
+    gap: 24px;
 }
 
 .team-list-item {
   width: calc((100% - 72px) / 4);
 }
 
-  
+.portfolio {
+  padding-bottom: 120px;
+  padding-top: 120px;
+}
+
+.portfolio-list {
+  row-gap: 48px;
+column-gap: 24px;
+}
+
+.portfolio-list-item {
+  width: calc((100% - 48px) / 3);
+}
+
+
+
 }
 
